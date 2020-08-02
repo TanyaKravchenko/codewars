@@ -9,3 +9,5 @@ multiply = function (a, b) {
 
 // the best
 //const multiply = (a, b) => a * b;
+
+console.log(multiply(5, 3));
