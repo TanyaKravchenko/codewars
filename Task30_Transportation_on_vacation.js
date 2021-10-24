@@ -5,14 +5,8 @@
 // days, you get $20 off your total.  Write a code that gives out the total amount for different days(d).
 
 function rentalCarCost(d) {
-    let total = 40 * d,
-        discount = 0;
-    if (d >= 7) {
-        total -= 50
-    } else if (d >= 3) {
-        total -= 20
-    }
-    return total
+    if(d<3) return d * 40;
+    if(7>d && d>=3) return (d*40 -20);
+    if(d>=7) return (d*40 -50);
 }
-
 // const rentalCarCost = d => d * 40 - ((d > 6) ? 50 : ((d > 2) ? 20 : 0));
