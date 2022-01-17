@@ -2,7 +2,7 @@
 //
 // Examples:
 //
-//     rps('scissors','paper') // Player 1 won!
+// rps('scissors','paper') // Player 1 won!
 // rps('scissors','rock') // Player 2 won!
 // rps('paper','paper') // Draw!
 
