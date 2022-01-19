@@ -1,16 +1,11 @@
-// Write a function to split a string and convert it into an array of words. For example:
+// Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning or the end of the sentence!
 //
-// "Robin Singh" ==> ["Robin", "Singh"]
-//
-// "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
+// Example
+//     ['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
 
-function stringToArray1(string){
-
-    let arr = string.split(' ')
-    return arr
+function smash (words) {
+    return words.join(' ')
 }
+console.log(smash(["hello", "world"]))
 
-
-
-let stringToArray = (string) => string.split(' ')
-console.log(stringToArray("Robin Singh"))
+const smash1 = words => words.join(' ');
