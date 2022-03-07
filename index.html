@@ -1,80 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Codewars</title>
-<!--    <script-->
-<!--            src="https://code.jquery.com/jquery-2.2.4.js"-->
-<!--            integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="-->
-<!--            crossorigin="anonymous">-->
+    <!--    <script-->
+    <!--            src="https://code.jquery.com/jquery-2.2.4.js"-->
+    <!--            integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="-->
+    <!--            crossorigin="anonymous">-->
 
-<!--    </script>-->
+    <!--    </script>-->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
+    <button id="click-me">ClickMe</button>
+    номер страницы: <input type="number" value="" id="page-number" />
+    <div id="result"></div>
 
-<button id="click-me">ClickMe</button>
-номер страницы: <input type="number" value="" id="page-number">
-<div id="result"></div>
+    <!--<script src="Task1_Multiply.js"></script>-->
+    <!--<script src="Task2_Even_or_Odd.js"></script>-->
+    <!--<script src="Task3_Sum_of_positive.js"></script>-->
+    <!--<script src="Task4_Opposite_number.js"></script>-->
+    <!--<script src="Task5_Remove_First_and_Last_Character.js"></script>-->
+    <!--<script src="Task6_Return_Negative.js"></script>-->
+    <!--<script src="Task7_String_repeat.js"></script>-->
+    <!--<script src="Task8_Remove_String_Spaces.js"></script>-->
+    <!--<script src="Task9_Find_the_smallest_integer_in_the_array.js"></script>-->
+    <!--<script src="Task10_Grasshopper_Summation.js"></script>-->
+    <!--<script src="Task11_Convert_boolean_values_to_strings_'Yes'_or_'No'.js"></script>-->
+    <!--<script src="Task12_Counting_sheep...js"></script>-->
+    <!--<script src="Task13_Reversed_Strings.js"></script>-->
+    <!--<script src="Task14_Century_From_Year.js"></script>-->
+    <!--<script src="Task15_Find_the_odd_int.js"></script>-->
+    <!--<script src="Task16_Convert_a_Number_to_a_String!.js"></script>-->
+    <script src="Task17_Basic_Mathematical_Operations.js"></script>
+    <script src="Task18_Is_n_divisible_by_x_and_y.js"></script>
+    <script src="Task19_Convert_number_to_reversed%20_array_of_digits.js"></script>
+    <script src="Task20_Beginner_Series_4_Cockroach.js"></script>
+    <script src="Task21_Square(n)_Sum.js"></script>
+    <script src="Task22_Keep_Hydrated!.js"></script>
+    <script src="Task23_Capitalization_and_Mutability.js"></script>
+    <script src="Task24_Grasshopper_Debug.js"></script>
+    <script src="Task25_Abbreviate_a_Two%20_Word_Name.js"></script>
+    <script src="Task26_A_Needle_in_the%20_Haystack.js"></script>
+    <script src="Task27_Count_of_positives__sum_of_negatives.js"></script>
+    <script src="Task28_Beginner__Lost_Without_a_Map.js"></script>
+    <script src="Task29_Reversed_sequence.js"></script>
+    <script src="Task30_Transportation_on_vacation.js"></script>
+    <script src="Task31_What's_the_real_floor.js"></script>
+    <script src="Task32_Reverse_List_Order.js"></script>
+    <script src="Task33_You_only_need_one_Beginner.js"></script>
+    <script src="Task34_Transportation_on_vacation.js"></script>
+    <script src="Task35_Function_2_-_squaring_an_argument.js"></script>
+    <script src="Task36_Sum_without_highest_and_lowest_number.js"></script>
+    <script src="Task37_Fake_Binary.js"></script>
+    <script src="Task38_Function_1_-_hello_world.js"></script>
+    <script src="Task39_Reversed_Words.js"></script>
+    <script src="Task40_Basic_variable_assignment.js"></script>
+    <script src="Task41_Twice_as_old.js"></script>
+    <script src="Task42_Third_Angle_of_a_Triangle.js"></script>
+    <script src="Task43_Beginner_Series_2_Clock.js"></script>
+    <script src="Task44_Get_the_mean_of_an_array.js"></script>
+    <script src="Task45_Convert_a_String_to_a_Number!.js"></script>
+    <script src="Task67_Sum_Arrays.js"></script>
+    <script src="Task68_Are_You_Playing_Banjo.js"></script>
+    <script src="Task75_Can_we_divide_it.js"></script>
+    <script src="Task77_Convert_a_string_to_an_array.js"></script>
+    <script src="Task78_Sentence_Smash.js"></script>
+    <script src="Task81_Will%20_there_be_enough_space.js"></script>
+    <script src="Task82_Get_Planet_Name_By_ID.js"></script>
+    <script src="Task84_Grasshopper_-_Grade%20book.js"></script>
+    <script src="Task85_Area_or_Perimeter.js"></script>
 
-
-<!--<script src="Task1_Multiply.js"></script>-->
-<!--<script src="Task2_Even_or_Odd.js"></script>-->
-<!--<script src="Task3_Sum_of_positive.js"></script>-->
-<!--<script src="Task4_Opposite_number.js"></script>-->
-<!--<script src="Task5_Remove_First_and_Last_Character.js"></script>-->
-<!--<script src="Task6_Return_Negative.js"></script>-->
-<!--<script src="Task7_String_repeat.js"></script>-->
-<!--<script src="Task8_Remove_String_Spaces.js"></script>-->
-<!--<script src="Task9_Find_the_smallest_integer_in_the_array.js"></script>-->
-<!--<script src="Task10_Grasshopper_Summation.js"></script>-->
-<!--<script src="Task11_Convert_boolean_values_to_strings_'Yes'_or_'No'.js"></script>-->
-<!--<script src="Task12_Counting_sheep...js"></script>-->
-<!--<script src="Task13_Reversed_Strings.js"></script>-->
-<!--<script src="Task14_Century_From_Year.js"></script>-->
-<!--<script src="Task15_Find_the_odd_int.js"></script>-->
-<!--<script src="Task16_Convert_a_Number_to_a_String!.js"></script>-->
-<script src="Task17_Basic_Mathematical_Operations.js"></script>
-<script src="Task18_Is_n_divisible_by_x_and_y.js"></script>
-<script src="Task19_Convert_number_to_reversed%20_array_of_digits.js"></script>
-<script src="Task20_Beginner_Series_4_Cockroach.js"></script>
-<script src="Task21_Square(n)_Sum.js"></script>
-<script src="Task22_Keep_Hydrated!.js"></script>
-<script src="Task23_Capitalization_and_Mutability.js"></script>
-<script src="Task24_Grasshopper_Debug.js"></script>
-<script src="Task25_Abbreviate_a_Two%20_Word_Name.js"></script>
-<script src='Task26_A_Needle_in_the%20_Haystack.js'></script>
-<script src='Task27_Count_of_positives__sum_of_negatives.js'></script>
-<script src='Task28_Beginner__Lost_Without_a_Map.js'></script>
-<script src='Task29_Reversed_sequence.js'></script>
-<script src='Task30_Transportation_on_vacation.js'></script>
-<script src="Task31_What's_the_real_floor.js"></script>
-<script src="Task32_Reverse_List_Order.js"></script>
-<script src="Task33_You_only_need_one_Beginner.js"></script>
-<script src="Task34_Transportation_on_vacation.js"></script>
-<script src="Task35_Function_2_-_squaring_an_argument.js"></script>
-<script src="Task36_Sum_without_highest_and_lowest_number.js"></script>
-<script src="Task37_Fake_Binary.js"></script>
-<script src="Task38_Function_1_-_hello_world.js"></script>
-<script src="Task39_Reversed_Words.js"></script>
-<script src="Task40_Basic_variable_assignment.js"></script>
-<script src="Task41_Twice_as_old.js"></script>
-<script src="Task42_Third_Angle_of_a_Triangle.js"></script>
-<script src="Task43_Beginner_Series_2_Clock.js"></script>
-<script src="Task44_Get_the_mean_of_an_array.js"></script>
-<script src="Task45_Convert_a_String_to_a_Number!.js"></script>
-<script src="Task67_Sum_Arrays.js"></script>
-<script src="Task68_Are_You_Playing_Banjo.js"></script>
-<script src="Task75_Can_we_divide_it.js"></script>
-<script src="Task77_Convert_a_string_to_an_array.js"></script>
-<script src="Task78_Sentence_Smash.js"></script>
-<script src="Task81_Will%20_there_be_enough_space.js"></script>
-<script src="Task82_Get_Planet_Name_By_ID.js"></script>
-<script src="Task84_Grasshopper_-_Grade%20book.js"></script>
-<script src="Task85_Area_or_Perimeter.js"></script>
-
-<script src="ajax_axios/ajax_axios.js"></script>
-<script src="ajax_axios/service.js"></script>
-
-</body>
+    <script src="ajax_axios/ajax_axios.js"></script>
+    <script src="ajax_axios/service.js"></script>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptas
+    unde aspernatur labore similique voluptate praesentium illo autem voluptates
+    animi voluptatem reprehenderit, sunt inventore, doloribus dicta? Sint
+    voluptates unde ad.
+  </body>
 </html>
