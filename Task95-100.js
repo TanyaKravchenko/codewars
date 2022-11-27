@@ -83,7 +83,7 @@ console.log(ggg)
 // 'Valkommen', welsh: 'Croeso' Possible invalid inputs include:  IP_ADDRESS_INVALID - not a valid ipv4 or ipv6 ip
 // address IP_ADDRESS_NOT_FOUND - ip address not in the database IP_ADDRESS_REQUIRED - no ip address was supplied
 
-function greet(language) {
+function greet1(language) {
     const base = {
         english: 'Welcome',
         czech: 'Vitejte',
@@ -134,4 +134,22 @@ function greet(language) {
 //     http://www.slate.com/articles/news_and_politics/explainer/2009/05/a_dogs_life.html
 //         If you liked this Kata there is another related one here
 
+let humanYearsCatYearsDogYears = (humanYears) => {
+    let dogYears = 0
+    let catYears = 0
 
+    if (humanYears === 1) {
+        catYears = 15;
+        dogYears = 15;
+    } else if (humanYears === 2) {
+        catYears = 24;
+        dogYears = 24;
+    } else if (humanYears >= 3) {
+        catYears = 4*humanYears +16;
+        dogYears = 5*humanYears +14;
+    }
+    return [humanYears, catYears, dogYears];
+}
+
+
+console.log(humanYearsCatYearsDogYears(10))
