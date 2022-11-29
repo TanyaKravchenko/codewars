@@ -1,4 +1,4 @@
-// All Star Code Challenge #18
+// 101. All Star Code Challenge #18
 // This Kata is intended as a small challenge for my students
 //
 // All Star Code Challenge #18
@@ -19,4 +19,45 @@ function strCount(str, letter) {
     return str.split('').filter(el =>  el === letter).length
 }
 
+// function strCount(str, letter){
+//     let count = 0;
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] == letter)
+//             count++;
+//     }
+//     return count;
+// }
+
 console.log(strCount('Hello', 'l'))
+
+
+// 102.Is it a palindrome?
+//     Write a function that checks if a given string (case insensitive) is a palindrome.
+
+const isPalindrome = (x) => {
+    return x.toLowerCase().split('').reverse().join('') === x.toLowerCase()
+}
+
+console.log(isPalindrome('HEllE'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
