@@ -50,12 +50,14 @@ console.log(isPalindrome('HEllE'))
 // n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]
 
 function powersOfTwo(n) {
-    let result = [];
-    for (let i = 0; i <= n; i++) {
-        result.push(2 ** i);
+    let result = []
+    for(let i = 0; i <= n; i++) {
+        result.push(2 ** i)
     }
-    return result;
+    return result
 }
+
+console.log(powersOfTwo(4))
 
 
 
