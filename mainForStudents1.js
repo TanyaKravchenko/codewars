@@ -103,8 +103,8 @@ console.log(students[0] === copyStudents[0]) // true // - что должно б
 console.log(students[1].id === copyStudents[1].id) // true //- что должно быть в консоли?
 
 //4*. Полная (глубокая) копия массива students (map)
-let deepCopyStudents = [...students.map(el => ({...el}))];
-let deepCopyStudents1 = [...students.map(el => ({...el.age}))];
+let deepCopyStudents = students.map(el => ({...el}));
+let deepCopyStudents1 = students.map(el => ({...el.age}));
 
 //Проверка:
 console.log(deepCopyStudents === students) // false // - что должно быть в консоли?
@@ -126,19 +126,22 @@ let sortedByName = [...deepCopyStudents].sort((a, b) => {
     return 0
 })
 
+let sortedByName1 = [...deepCopyStudents].sort((a, b) => a.name > b.name ? 1 : -1)
+
 console.log(sortedByName);
+console.log(sortedByName1);
 
 //5a. Отсортируйте deepCopyStudents по успеваемости (лучший идёт первым)(sort)
-let sortedByScores = [...deepCopyStudents].sort((a, b) => {
-    if (a.scores < b.scores) {
+let sortedByScores = deepCopyStudents.sort((a, b) => {
+    if (a.scores > b.scores) {
         return 1
-    } else if (a.scores > b.scores) {
+    } else if (a.scores < b.scores) {
         return -1
     }
     return 0
 });
 
-let sortedByScores1 = [...deepCopyStudents].sort((a, b) => a.scores < b.scores ? 1 : -1);
+let sortedByScores1 = deepCopyStudents.sort((a, b) => b.scores - a.scores);
 console.log(sortedByScores);
 console.log(sortedByScores1);
 
@@ -207,7 +210,10 @@ console.log(scoresSum)
 // значением которого является массив имён всех остальных студентов из массива students,
 // за исключением собственного имени студента. Т.е. в друзьях у Боба Боба быть не должно.
 const addFriends = (students) => {
-    //..............................
+   return  students.map(el => ({
+       ...el,
+       friends: students.filter(s => s.name !==el.name).map(st => st.name)}))
+
 }
 console.log(addFriends(students));
 
@@ -219,7 +225,9 @@ console.log(addFriends(students));
 // getBestStudents(students, 3)
 // getBestStudents(students, 10) => [{}, {}, ...., {}, null, null, null, null ]
 
-
+// Напишите функцию addFriends, которая принимает параметром массив и добавляет в каждый элемент массива свойство
+// "friends", значением которого является массив имён всех остальных студентов из массива students, за исключением
+// собственного имени студента. Т.е. в друзьях у Боба Боба быть не должно.
 
 
 
