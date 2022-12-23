@@ -94,6 +94,7 @@ function sumStr(a, b) {
 
 console.log(sumStr('5', '6'))
 console.log(sumStr('0', '22'))
+console.log(sumStr('100', '22'))
 
 
 
